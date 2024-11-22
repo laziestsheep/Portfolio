@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanessa's Portfolio</title>
+    <title>Vanessa | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Vanessa</h1>
-        <p>Aspiring Software Engineer | Customer Service Expert</p>
+        <div class="container">
+            <h1>Vanessa</h1>
+            <p>Aspiring Software Engineer | Customer Service Expert</p>
+            <a href="#contact" class="cta">Contact Me</a>
+        </div>
     </header>
 
     <nav>
-        <ul>
+        <ul class="navbar">
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -21,35 +24,51 @@
         </ul>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Vanessa, an aspiring software engineer with a strong foundation in customer service and computer science. I'm passionate about creating innovative solutions and learning new technologies.</p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Vanessa, a dedicated professional with a background in computer science and customer service.
+                I am passionate about transitioning into software engineering and creating impactful projects.
+            </p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Data Analysis (Pandas, NumPy)</li>
-            <li>Customer Service & Problem-Solving</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Python</div>
+                <div class="skill-card">HTML & CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Data Analysis</div>
+                <div class="skill-card">Problem Solving</div>
+                <div class="skill-card">Customer Service</div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Portfolio Website</a> - A simple personal website to showcase my work.</li>
-            <li><a href="#">Task Manager App</a> - A web app to manage daily tasks efficiently.</li>
-            <li><a href="#">Sentiment Analysis Tool</a> - Analyzes social media data for sentiment trends.</li>
-        </ul>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal website showcasing my skills and projects.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Manager App</h3>
+                    <p>A web app to efficiently manage daily tasks.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Sentiment Analysis Tool</h3>
+                    <p>An analytics tool to evaluate social media sentiment.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:vanessa@example.com">vanessa@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/vanessa">https://linkedin.com/in/vanessa</a></p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:vanessa@example.com">vanessa@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/vanessa">linkedin.com/in/vanessa</a></p>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 Vanessa. All rights reserved.</p>
