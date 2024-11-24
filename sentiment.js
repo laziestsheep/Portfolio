@@ -1,4 +1,4 @@
-document.getElementById("analyzeButton").addEventListener("click", async () => {
+document.getElementById("analyzeButton").addEventListener("click", () => {
     const userInput = document.getElementById("userInput").value.trim();
     const sentimentResult = document.getElementById("sentimentResult");
 
@@ -7,23 +7,21 @@ document.getElementById("analyzeButton").addEventListener("click", async () => {
         return;
     }
 
-    try {
-        const response = await fetch("http://127.0.0.1:5000/analyze", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ text: userInput }),
-        });
+    // Basic sentiment keywords
+    const positiveWords = ["good", "great", "awesome", "fantastic", "happy"];
+    const negativeWords = ["bad", "terrible", "sad", "awful", "angry"];
 
-        const result = await response.json();
-
-        if (response.ok) {
-            sentimentResult.textContent = `Sentiment: ${result.sentiment}`;
-        } else {
-            sentimentResult.textContent = "Error analyzing sentiment.";
+    let sentiment = "Neutral 😐";
+    positiveWords.forEach(word => {
+        if (userInput.toLowerCase().includes(word)) {
+            sentiment = "Positive 😊";
         }
-    } catch (error) {
-        sentimentResult.textContent = "Error connecting to the server.";
-    }
+    });
+    negativeWords.forEach(word => {
+        if (userInput.toLowerCase().includes(word)) {
+            sentiment = "Negative 😞";
+        }
+    });
+
+    sentimentResult.textContent = `Sentiment: ${sentiment}`;
 });
